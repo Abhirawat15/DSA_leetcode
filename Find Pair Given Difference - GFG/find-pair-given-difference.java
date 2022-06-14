@@ -42,8 +42,6 @@ class Solution
     {
         //code here
         Arrays.sort(arr);
-        int left=0;
-        int right=size-1;
         boolean flag=false;
         for(int i=0;i<size-1;i++){
             for(int j=i+1;j<size;j++){
