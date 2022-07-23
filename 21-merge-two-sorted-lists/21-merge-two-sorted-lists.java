@@ -26,9 +26,10 @@ class Solution {
         
         if(list1!=null){
             dummy.next=list1;
-        }else{
+        }
+        
+        if(list2!=null){
             dummy.next=list2;
-           
         }
         
         return head.next;
