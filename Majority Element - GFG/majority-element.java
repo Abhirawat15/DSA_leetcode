@@ -55,11 +55,7 @@ class Solution
             
         }
         
+        return maxFreq>div?maxNum:-1;
         
-        
-        if(maxFreq>div){
-            return maxNum;
-        }
-        return -1;
     }
 }
