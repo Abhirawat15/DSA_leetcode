@@ -34,9 +34,27 @@ class Sol
     public static int search(int A[], int N)
     {
         // your code here
+        int count=0;
         int ans=0;
-        for(int i=0;i<N;i++){
-            ans^=A[i];
+        if(N==1){
+            return A[0];
+        }
+        if(A[0]!=A[1]){
+            return A[0];
+        }
+        for(int i=1;i<N;i++){
+            if(A[i-1]!=A[i]){
+                count++;
+                if(count==2){
+                    ans=A[i-1];
+                    return ans;
+                }
+            }else{
+                count=0;
+            }
+        }
+        if(A[N-1]!=A[N-2]){
+            ans=A[N-1];
         }
         return ans;
     }
