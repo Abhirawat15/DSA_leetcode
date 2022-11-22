@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //Initial Template for Java
 
 import java.io.*;
@@ -16,19 +16,23 @@ class GFG {
             System.out.println(ob.isPalindrome(S));
         }
     }
-}// } Driver Code Ends
+}
+// } Driver Code Ends
 
 
 //User function Template for Java
 
 class Solution {
     int isPalindrome(String S) {
-        for(int i=0;i<S.length();i++){
-            char temp=S.charAt(i);
-            char end=S.charAt(S.length()-(i+1));
-            if(temp!=end){
+        // code here
+        int left=0;
+        int right=S.length()-1;
+        while(left<=right){
+            if(S.charAt(left)!=S.charAt(right)){
                 return 0;
             }
+            left++;
+            right--;
         }
         return 1;
     }
