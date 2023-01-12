@@ -45,16 +45,15 @@ class Solution {
     {
         // Your code goes here
         Arrays.sort(a);
-        ArrayList<Long> al=new ArrayList<>();
-        for(int i=0;i<n;i++){
-            al.add(b[i]);
-        }
-        Collections.sort(al);
-        Collections.reverse(al);
+        Arrays.sort(b);
         
         long sum=0;
-        for(int i=0;i<n;i++){
-            sum+=(a[i]*al.get(i));
+        int s=0;
+        int e=(int)n-1;
+        while(s<n){
+            sum+=(a[s]*b[e]);
+            s++;
+            e--;
         }
         return sum;
     }
