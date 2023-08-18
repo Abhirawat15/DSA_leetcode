@@ -13,13 +13,11 @@ class Solution {
         int arr[][]=new int[r][c];
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
-                if(l<mat[0].length){
-                    arr[i][j]=mat[k][l++];
-                }else{
+                if(l==mat[0].length){
                     k++;
                     l=0;
-                    arr[i][j]=mat[k][l++];
                 }
+                arr[i][j]=mat[k][l++];
             }
         }
         return arr;
